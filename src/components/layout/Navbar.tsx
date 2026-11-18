@@ -40,10 +40,18 @@ export default function Navbar() {
             <HeartPulse className="h-5 w-5" />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-lg font-bold text-ink">
+            <span
+              className={`block font-display text-lg font-bold ${
+                scrolled ? "text-ink" : "text-white"
+              }`}
+            >
               Hope IVF
             </span>
-            <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
+            <span
+              className={`block text-[10px] font-medium uppercase tracking-[0.2em] ${
+                scrolled ? "text-muted" : "text-white/75"
+              }`}
+            >
               Clinic · Lahore
             </span>
           </span>
@@ -57,7 +65,13 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`relative rounded-full px-4 py-2 text-sm font-medium transition ${
-                  active ? "text-primary" : "text-ink/70 hover:text-ink"
+                  active
+                    ? scrolled
+                      ? "text-primary"
+                      : "text-white"
+                    : scrolled
+                      ? "text-ink/70 hover:text-ink"
+                      : "text-white/80 hover:text-white"
                 }`}
               >
                 {link.label}

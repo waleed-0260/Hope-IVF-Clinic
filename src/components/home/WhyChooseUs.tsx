@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={reason.title}
-                className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
+                className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16"
               >
                 <motion.div
                   className={`relative ${imageLeft ? "" : "lg:order-2"}`}
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                   <span className="font-display text-5xl font-bold text-primary/15 lg:text-6xl">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-3 text-balance font-display text-2xl font-bold text-ink lg:text-3xl">
+                  <h3 className="mt-4 text-balance font-display text-2xl font-bold text-ink lg:text-3xl">
                     {reason.title}
                   </h3>
                   <p className="mt-4 text-base leading-relaxed text-muted lg:text-lg">

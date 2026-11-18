@@ -14,8 +14,9 @@
   --color-muted: #6b7280;
   --color-whatsapp: #25d366;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
 }
 
 @layer base {
